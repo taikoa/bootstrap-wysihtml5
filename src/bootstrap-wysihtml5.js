@@ -137,6 +137,14 @@
                 "</div>" +
                 "<a class='btn' data-wysihtml5-command='insertVideo' title='" + locale.video.insert + "'><i class='icon-film'></i></a>" +
                 "</li>";
+        },
+        "undo": function(locale) {
+            return "<li>" +
+                "<a data-wysihtml5-command='undo' class='btn' href='javascript:;' title='Undo' unselectable='on'><i class='icon-arrow-left'></i></a>";
+        },
+        "redo": function(locale) {
+            return "<li>" +
+                "<a data-wysihtml5-command='redo' class='btn' href='javascript:;' title='Redo' unselectable='on'><i class='icon-arrow-right'></i></a>";
         }
     };
 
@@ -474,6 +482,8 @@
         "link": true,
         "image": true,
         "video": true,
+        "undo": true,
+        "redo": true,
         events: {},
         parserRules: {
             classes: {
